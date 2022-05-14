@@ -4,4 +4,4 @@
 
 std::string LoadStringFromFile(const std::string& fileName);
 
-int CountNumberOfGroups(const std::string& line);
+unsigned long long CountNumberOfGroups(const std::string& line);

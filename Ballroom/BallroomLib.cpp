@@ -18,11 +18,11 @@ std::string LoadStringFromFile(const std::string& fileName)
 	return line;
 }
 
-int CountNumberOfGroups(const std::string& line)
+unsigned long long CountNumberOfGroups(const std::string& line)
 {
-	int difference{}, count{};
+	unsigned long long difference{}, count{};
 	std::vector<int> prefixes(5'000'000, 0);
-	prefixes[0 + 1'000'001]++;
+	prefixes[0 + 2'500'001]++;
 
 	for (size_t i = 0; i < line.size(); i++)
 	{
@@ -39,8 +39,8 @@ int CountNumberOfGroups(const std::string& line)
 			break;
 		}
 
-		count += prefixes[difference + 1'000'001];
-		prefixes[difference + 1'000'001]++;
+		count += prefixes[difference + 2'500'001];
+		prefixes[difference + 2'500'001]++;
 	}
 
 	return count;
